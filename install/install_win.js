@@ -14,7 +14,6 @@ module.exports = function(){
 			console.log("Found edge!\n");
 			makeEnv(false);
 		}
-		
 		else{
 			console.error("edge-js not found\n");
 			process.exit(1);
