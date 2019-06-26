@@ -1,15 +1,16 @@
 const fs = require('fs');
+const path = require('path');
 
 module.exports = function(){
 	
-	if(fs.existsSync(__dirname + "/../../electron-edge-js")){
+	if(fs.existsSync(path.join(__dirname, "../../electron-edge-js"))){
 		console.log("Found electron-edge-js!\n");
 		makeEnv(true);
 	}
 	else{
 		console.warn("\nelectron-edge not found. Trying to find edge.js\n")
 
-		if(fs.existsSync(__dirname + "/../../edge-js")){
+		if(fs.existsSync(path.join(__dirname, "../../edge-js"))){
 			console.log("Found edge!\n");
 			makeEnv(false);
 		}
